@@ -32,6 +32,7 @@ exports.run = (client, message, args) => {
     autor.roles.add(desiredRole)
     autor.roles.add('818220675679911956') // Primata
     autor.roles.remove('817120411698462761') // Alma Penada
+    client.users.cache.get('198931416472485898').send(`A pessoa ${message.author.username} escolheu ${args}`)
     const embed = new MessageEmbed()
       .setTitle('Bem vindo à tribo primata!')
       .setColor('#16b6f5')

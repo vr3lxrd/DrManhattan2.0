@@ -1,5 +1,5 @@
 module.exports = (client, message) => {
-    if (message.content.startsWith(process.env.PREFIX)){ 
+    if (message.content.startsWith(process.env.PREFIX || '-')){ 
 
         if (message.author.bot) return
 
@@ -19,7 +19,7 @@ module.exports = (client, message) => {
         }
     }
 
-    if (!message.content.startsWith(process.env.PREFIX) && message.channel.id === '818189362176065588') {
+    if (!message.content.startsWith(process.env.PREFIX || '-') && message.channel.id === '818189362176065588') {
         message.delete({ timeout: 1000 })
         message.author.send('Use o canal #escolha-sua-tribo apenas para escolher a tribo!')
     }
